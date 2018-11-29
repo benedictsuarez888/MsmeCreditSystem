@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MSME</title>
+
+    <!-- Bootstrap -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <center><h1 class="text-center">CreditWorthy</h1></center>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div id="petsRow" class="row">
+        <div class="col-sm-6 col-sm-push-3 col-md-4 col-md-push-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <center><h3 class="panel-title">Loan Money</h3></center>
+            </div>
+            <div class="panel-body">
+              <br>
+              <h5 class="text-center">Loan Amount:</h5>
+              <input type="text" class="form-control" id="loan_amount" placeholder="" />
+              <br>
+              <h5 class="text-center">Year(s):</h5>
+              <select style="width: 50%; float: right; padding:7px; border-radius: 4px; background-color: white;" id="loan_years">
+                <option value="1">1 year</option>
+                <option value="2">2 years</option>
+              </select>
+              <br>
+              <h5 class="text-center">Interest:</h5>
+              <input type="text" class="form-control" id="TTTransferAmount" placeholder="" disabled/>
+              <br>
+              <br>
+              <button class="btn btn-primary" id="calculateButton" type="button">Calculate</button>
+              <br>
+              <hr>
+              <br>
+              <h5 class="text-center">Principal Loan:</h5>
+              <input type="text" class="form-control" id="principal" placeholder="" disabled/>
+              <br>
+              <h5 class="text-center">Interest Rate:</h5>
+              <input type="text" class="form-control" id="interest_rate" placeholder="" disabled/>
+              <br>
+              <h5 class="text-center">Total Loan:</h5>
+              <input type="text" class="form-control" id="total_loan" placeholder="" disabled/>
+              <br>
+              <h5 class="text-center">EMI:</h5>
+              <input type="text" class="form-control" id="total_emi" placeholder="" disabled/>
+              <br>
+              <br>
+              <br>
+              <button class="btn btn-primary" id="calculateLoan" type="button" disabled>Confirm Loan</button>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <center><h3 class="panel-title">Balance</h3></center>
+            </div>
+            <div class="panel-body">
+            <center><h2>CREDIT SCORE</h2><h1><span id="TTBalance"></span>%</h1></center>
+            <br>
+              <h5 class="text-center">Principal Loan:</h5>
+              <input type="text" class="form-control" id="TTTransferAddress" placeholder="" disabled/>
+              <br>
+              <h5 class="text-center">Interest Rate:</h5>
+              <input type="text" class="form-control" id="TTTransferAmount" placeholder="" disabled/>
+              <br>                <h5 class="text-center">Total Loan:</h5>
+              <input type="text" class="form-control" id="TTTransferAmount" placeholder="" disabled/>
+              <br>
+              <h5 class="text-center">EMI:</h5>
+              <input type="text" class="form-control" id="TTTransferAmount" placeholder="" disabled/>
+              <br>
+              <br>
+              <br>
+              <button class="btn btn-primary" id="paymentButton" type="button" disabled>Payment</button>
+            </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <center><h3 class="panel-title">Payment</h3></center>
+              </div>
+              <div class="panel-body">
+                <br>
+                <h5 class="text-center">EMI Payment:</h5>
+                <input type="text" class="form-control" id="TTTransferAddress" placeholder="" disabled/>
+                <br>
+                <h5 class="text-center">For the Month of:</h5>
+                <select id="monthsel" style="width: 50%; float: right; padding:7px; border-radius: 4px;" disabled>
+                  <option value="jan">January</option>
+                  <option value="feb">February</option>
+                  <option value="mar">March</option>
+                  <option value="apr">April</option>
+                  <option value="may">May</option>
+                  <option value="jun">June</option>
+                  <option value="jul">July</option>
+                  <option value="aug">August</option>
+                  <option value="sep">September</option>
+                  <option value="oct">October</option>
+                  <option value="nov">November</option>
+                  <option value="dec">December</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <button class="btn btn-primary" id="payButton" type="button" disabled>Pay</button>
+              </div>
+            </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
